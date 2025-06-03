@@ -1,0 +1,41 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/Validacao/Validar/BAVR2MUXTJRE2",
+      "destination": "/Validacao/Validar/BAVR2MUXTJRE2.html"
+    },
+    {
+      "source": "/Validacao/Validar/BAVR2MUXTJRE2.html",
+      "destination": "/Validacao/Validar/BAVR2MUXTJRE2.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*\\.css)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}

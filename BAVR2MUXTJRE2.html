@@ -1,0 +1,69 @@
+
+
+
+
+
+<script type="text/javascript" src="/Scripts/Carteirinha.js?20250529181314"></script>
+<script type="text/javascript" src="https://sedseecdn.azureedge.net/scripts/google.jsapi.js" language="javascript"></script>
+<link href="/Content/SED/CarteirinhaValidacao.css" rel="stylesheet" />
+
+<script type='application/javascript'>
+    $(document).ready(function () {
+        $(function () {
+           TrocarTurma($('#Turmas').val(), $('#CodAluno').val(), $('#UrlFoto').val())
+        });
+
+        $('#Turmas').change(function (event) {
+            event.returnValue = false;
+            TrocarTurma($(this).val(), $('#CodAluno').val(), $('#UrlFoto').val())
+        });
+    });
+</script>
+<style>
+    label { margin-bottom: 0px;}
+</style>
+
+    <section class="formulario">
+         <input data-val="true" data-val-number="O campo CodigoAluno deve ser um número." data-val-required="The CodigoAluno field is required." id="CodAluno" name="CodigoAluno" type="hidden" value="29597958" />
+        <input type="hidden" name="QtdTurmas" id="QtdTurmas" />
+        <input type="hidden" name="UrlFoto" id="UrlFoto" value="/FotoAlunoCarteirinha/Index?ra=0001121267427SP" />
+        <div class="formulario_elementos">
+            <label class="label_form"><label class="label_form">Código do QR Code</label>
+                <input class="campo" id="codigoAluno" type="text" />
+                <a class="botao" href="javascript:void(0)" id="pesquisar" onclick="ValidarCarteirinha()" ></a>
+            </label>
+        </div>
+    </section>
+<div id="conteudo">
+        <section class="dados">
+            <div class="nome_usual">
+                
+            </div>
+            <div class="fotografia" style="display:inline-block;float:left;padding-left:20px;">
+                <img src="/FotoAlunoCarteirinha/Imagem do WhatsApp de 2025-06-02 à(s) 21.52.57_63c007b5.jpg" alt="Foto Indisponível" width="160px" height="210px" />
+            </div>
+            <div class="informacoes" style="display:inline-block;padding-left:20px;padding-top:20px;">
+                <label class="texto_legenda">Nome Completo:</label><label class="texto_dados">FELIPE DOS SANTOS DE LIMA</label><br />
+                <label class="texto_legenda">Número da RA:</label><label class="texto_dados">
+                    000111174817
+                    -
+                    2 
+                    /
+                    SP
+                </label><br />
+
+                    <label class="texto_legenda">Nome da Escola:</label>
+                    <label class="texto_dados"> JARDIM DIVA TARLA DE CARVALHO</label>
+                    <br />
+                    <label class="texto_legenda">Diretoria:</label>
+                    <label class="texto_dados">
+                        RIBEIRAO PRETO
+                        /
+                        RIBEIRAO PRETO                         
+                    </label>
+                    <br />
+                    <label class="texto_legenda">Data de validade:</label>
+                    <label class="texto_dados">12/2025</label>
+            </div>
+        </section>
+    </div>
